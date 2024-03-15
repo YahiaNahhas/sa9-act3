@@ -17,7 +17,7 @@ class Reciept
   end
 
 def show_info
-  puts "Your Reicept total is $#{@amount}"
+  puts "Your Reciept total is $#{@amount}"
     end
   end
 end

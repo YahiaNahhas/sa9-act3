@@ -1,4 +1,4 @@
-require_relative 'payment'
+require 'oop-program'
 
 RSpec.describe Payments::Invoice do
   describe "#initialize" do
@@ -16,18 +16,18 @@ RSpec.describe Payments::Invoice do
   end
 end
 
-RSpec.describe Payments::Receipt do
+RSpec.describe Payments::Reciept do
   describe "#initialize" do
-    it "creates a Receipt instance with the given amount" do
-      receipt = Payments::Receipt.new(600)
-      expect(receipt.instance_variable_get(:@amount)).to eq(600)
+    it "creates a Reciept instance with the given amount" do
+      reciept = Payments::Reciept.new(600)
+      expect(reciept.instance_variable_get(:@amount)).to eq(600)
     end
   end
 
   describe "#show_info" do
     it "displays the correct information for Receipt" do
-      receipt = Payments::Receipt.new(600)
-      expect { receipt.show_info }.to output("Your Receipt total is $600\n").to_stdout
+      reciept = Payments::Reciept.new(600)
+      expect { reciept.show_info }.to output("Your Reciept total is $600\n").to_stdout
     end
   end
 end
